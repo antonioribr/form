@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-color:#ca4747;
+    --primary-color:#EBCE07;
+}
+
+body{
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 3;
+    width: 80%;
+    padding: 20px;
+    gap: 40px;
+    justify-content: center;
+}
+
+.titulo{
+    font-size: 40px;
+    text-align: center;
+    color: var(--primary-color);
+    user-select: none;
+}
+
+.row{
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+}
+
+.inputbox{
+    display: flex;
+    flex-direction: column-reverse;
+    height: 40px;
+    position: relative;
+}
+
+.inputbox label{
+    font-size: 20px;
+    top: 0;
+    left: 10px;
+    position: relative;
+    color: var(--primary-color);
+    cursor: text;
+    transition: .5s;
+}
+
+.inputbox input{
+    position: absolute;
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 3px; 
+    bottom: 0;
+    border: none;
+    box-shadow: none;
+    border-radius: 2px;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+    padding: 0 10px;
+    transition: .5s;
+}
+
+.inputbox input:focus,
+.inputbox input:valid
+{
+    height: 100%;
+}
+
+.inputbox input:focus + label,
+.inputbox input:valid + label{
+    top: -40px;
+    left: 0;
+}
+
+.container button{
+    width: 200px;
+    height: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 14px;
+    justify-self: center;
+}
+
+.container button:hover{
+    background-color: rgb(255, 255, 255);
+    transition: 0.5s;
+}
+
+footer{
+    color: var(--primary-color);
+}
